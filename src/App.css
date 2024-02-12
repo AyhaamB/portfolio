@@ -1,0 +1,329 @@
+* {
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+@keyframes navAnimation {
+  from {
+    transform: (0px);
+  }
+
+  to {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: translateY(3px);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+.box-shadow {
+  margin: 40px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background-color: #FBF7F4;
+  padding: 10px;
+  border-radius: 3px;
+  height: 90vh;
+}
+
+body {
+  background-image: url('/radiant-gradient.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons {
+  margin-right: 10px;
+}
+
+nav {
+  padding: 10px;
+  background-color: #FBF7F4;
+  border-bottom: solid;
+  border-color: lightgray;
+}
+
+a.navbar-brand {
+  padding-left: 20px;
+  color: black;
+}
+
+.nav-item {
+  padding-right: 20px;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.nav-item:hover {
+  animation-name: navAnimation;
+  animation-duration: 0.2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.nav-item a {
+  color: black;
+}
+
+.home {
+  background-color: #FBF7F4;
+}
+
+.home-content {
+  background-color: #FBF7F4;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.headshot {
+  background-color: lightgray;
+  width: 300px;
+  height: 300px;
+  margin: 100px;
+  box-shadow: 15px 15px 12px rgb(77, 73, 73);
+  border-radius: 3px;
+}
+
+.headshot-div {
+  justify-content: center;
+  align-items: center;
+}
+
+#greeting {
+  font-size: larger;
+  margin: 3px;
+}
+
+#title {
+  color: gray;
+  font-size: 1.5em;
+}
+
+#hire-me {
+  margin-top: 10px;
+}
+
+#name-intro {
+  font-size: 3em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.home-div {
+  background-color: #FBF7F4;
+  margin-left: 90px;
+}
+
+.home-div p {
+  margin: 0px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 80vh;
+}
+
+.icon-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.icon-description {
+  border-left: solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-color: lightgray;
+}
+
+.about-icon {
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.icon-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+}
+
+.icon-grid a {
+  text-decoration: none;
+}
+
+.about-icon:hover {
+  animation: shrink;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.about-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+.about-info h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+
+.about-info li {
+  padding: 0px 15px 0px 15px;
+  list-style: circle;
+}
+
+.about-info p {
+  padding: 0px 15px 0px 15px;
+}
+
+.nav-link.selected {
+  text-decoration: underline;
+}
+
+.about-main {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 75vh;
+}
+
+.projects {
+  display: grid;
+  height: 80vh;
+}
+
+.project-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-sub {
+  color: black;
+}
+
+.projects-sub h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.projects-sub p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  color: gray;
+}
+
+.projects-heading {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  margin-left: 10px;
+  margin: 20px;
+}
+
+.project-div {
+  /* background-color: #E7DBD6; */
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 36% 64%;
+  height: 30vh;
+  scroll-behavior: smooth;
+  margin: 10px;
+}
+
+.project-showcase {
+  border-left: solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-color: lightgray;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.project-showcase a {
+  text-decoration: none;
+}
+
+/* .project-showcase a:hover {
+  opacity: 70%;
+} */
+
+.project-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.project-info {
+  padding: 10px;
+}
+
+.project-name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  color: black;
+}
+
+.project-desc {
+  color: black;
+}
+
+#weather-app-image {
+  background-image: url('/Launched Screenshot.png');
+}
+
+#finance-pal-image {
+  background-image: url('/finance-pal-screenshot.png');
+}
+
+#ecom-backend-image {
+  background-image: url('/e-commerce-backend-app-screenshot.png');
+}
+
+#sportstash-image {
+  background-image: url('/sportstash-screenshot.png');
+}
