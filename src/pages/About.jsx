@@ -12,7 +12,7 @@ const About = () => {
   };
 
   return (
-    <main>
+    <main className="fade-inn">
       <div className="about flex-row justify-center">
         <div className="icon-container">
           <div className="icon-grid">

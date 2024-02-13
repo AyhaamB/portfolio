@@ -1,6 +1,6 @@
 * {
-  font-family: sans-serif;
-  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
 }
 
 @keyframes navAnimation {
@@ -26,6 +26,28 @@
     transform: translateY(4px);
   }
 }
+
+.fade-inn {
+  animation: slideFadeIn 0.7s ease-in forwards;
+  opacity: 1;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    transform: translateY(100px);
+  }
+  33% {
+    transform: translateY(-5px); /* Adjust the hop height as needed */
+  }
+  66% {
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .box-shadow {
   margin: 40px;
@@ -202,7 +224,7 @@ a.navbar-brand {
   justify-content: center;
   flex-direction: column;
   border-radius: 3px;
-  margin: 20px;
+  margin: 3vh 10vw 3vh 3vw;
 }
 
 .about-info h1 {
@@ -230,100 +252,87 @@ a.navbar-brand {
   height: 75vh;
 }
 
-.projects {
-  display: grid;
-  height: 80vh;
-}
-
-.project-list-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.projects-sub {
-  color: black;
-}
-
-.projects-sub h2 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bolder;
-  margin-bottom: 10px;
-}
-
-.projects-sub p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bolder;
-  color: gray;
-}
-
-.projects-heading {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bolder;
-  margin-left: 10px;
-  margin: 20px;
-}
-
-.project-div {
-  /* background-color: #E7DBD6; */
-  border-radius: 3px;
-  display: grid;
-  grid-template-columns: 36% 64%;
-  height: 30vh;
-  scroll-behavior: smooth;
-  margin: 10px;
+.project-main {
+  height: 77vh;
+  padding: 2vh 0vh 0vh 0vh;
 }
 
 .project-showcase {
-  border-left: solid;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-color: lightgray;
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  height: 100%;
+  overflow-x: scroll;
   scroll-behavior: smooth;
 }
 
-.project-showcase a {
-  text-decoration: none;
-}
-
-/* .project-showcase a:hover {
-  opacity: 70%;
-} */
-
-.project-image {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-color: black;
-  border-radius: 3px;
-}
-
-.project-info {
-  padding: 10px;
+.project-div {
+  height: 100%;
+  border-radius: 5px;
+  width: 300px;
+  display: grid;
+  grid-template-rows: 60% 40%;
+  text-align: center;
+  overflow-y: hidden;
 }
 
 .project-name {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bolder;
-  color: black;
+  color: #000;
 }
 
 .project-desc {
-  color: black;
+  color: #000;
+  text-decoration: none;
 }
 
-#weather-app-image {
-  background-image: url('/Launched Screenshot.png');
+.project-link {
+  text-decoration: none;
 }
 
-#finance-pal-image {
-  background-image: url('/finance-pal-screenshot.png');
+.project-link .project-info {
+  opacity: 1;
+  transform: translateY(155px); /* Initially hide and shift down */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Add a smooth transition effect */
 }
 
-#ecom-backend-image {
-  background-image: url('/e-commerce-backend-app-screenshot.png');
+.project-link:hover .project-info {
+  opacity: 1;
+  transform: translateY(0); /* Show and shift up when the link is hovered */
 }
 
-#sportstash-image {
-  background-image: url('/sportstash-screenshot.png');
+
+.project-info {
+  padding: 1vh 0.5vw 0vh 0.5vw;
+  text-wrap: balance;
+}
+
+.inverted-4 {
+  background:
+    conic-gradient(from -45deg at 50% calc(5*100%/6),#e5e5e5 90deg, #cccccc  0) calc(0*100%/3) var(--_d, 100%),
+    conic-gradient(from -45deg at 50% calc(5*100%/6),#cccccc 90deg, #e5e5e5 0) calc(0*100%/3) var(--_d, 100%),
+    conic-gradient(from -45deg at 50% calc(4*100%/6),#e5e5e5 90deg, #cccccc  0) calc(1*100%/3) var(--_d, 100%),
+    conic-gradient(from -45deg at 50% calc(4*100%/6),#cccccc 90deg, #e5e5e5 0) calc(1*100%/3) var(--_d, 100%),
+    conic-gradient(from -45deg at 50% calc(3*100%/6),#e5e5e5 90deg, #cccccc  0) calc(2*100%/3) var(--_d, 100%),
+    conic-gradient(from -45deg at 50% calc(3*100%/6),#cccccc 90deg, #e5e5e5 0) calc(2*100%/3) var(--_d, 100%),
+    conic-gradient(from -45deg at 50% calc(2*100%/6),#e5e5e5 90deg, #cccccc  0) calc(3*100%/3) var(--_d, 100%),
+    conic-gradient(from -45deg at 50% calc(2*100%/6),#cccccc 90deg, #e5e5e5 0) calc(3*100%/3) var(--_d, 100%);
+  -webkit-background-clip: text, padding-box;
+          background-clip: text, padding-box;
+  background-size: calc(100%/4) 600%;
+  background-repeat: no-repeat;
+  transition: 1s linear;
+}
+.inverted-4:hover {
+  --_d: 0%;
+}
+
+.image-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  height: 100px;
+  width: 100px;
 }
